@@ -10,6 +10,7 @@ import Navbar from "./pages/april/components/Navbar";
 import SQL from "./components/SQL";
 import Landingpage from "./pages/michael/Landingpage";
 import CsharpQuiz1 from "./pages/michael/mini-game/Quiz1";
+import MatchingCardGame from "./pages/matching-card-game/App";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: "/games/CsharpQuiz1",
     element: <CsharpQuiz1 />,
+  },
+  {
+    path: "/games/matchingGame",
+    element: <MatchingCardGame />,
   },
 ]);
 

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+  } 
+
+.body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh;
+    border: 10px solid white;
+    background-color: white;
+}
+
+
+#main {
+    display: flex;
+    flex: 1;
+}
+
+#main > .cards {
+    flex: 1;
+    background: rgb(106, 64, 117);
+    max-width: calc(80% - 20px); /* set a maximum width */
+    padding: 1.5em; /* reduce padding */
+}
+
+#main > .input {
+    flex: 0 0 20%;
+    background: #d0c1a6;
+    order: 2;
+    max-width: 20%; /* set a maximum width */
+    padding: 1.5em; /* reduce padding */
+}
+
+.header{
+    background: #ffffff;
+    height: 4vh;
+    text-align: center;
+}
+
+.cards, .input{
+    padding: 3em;
+}
+
+.header {
+    padding: 0.1em;
+}
+
+#main .cards .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+img {
+    width: 140px;
+    height: 190px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-inner {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .popup h3 {
+    margin-top: 0;
+  }
+  
+  .popup button {
+    margin-top: 10px;
+  }
+  
