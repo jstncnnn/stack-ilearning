@@ -1,5 +1,6 @@
-import React from 'react';
-import './SingleCard.css';
+import React from "react";
+import "./SingleCard.css";
+import Cover from "./Cover.png";
 
 interface Props {
   card: {
@@ -12,7 +13,12 @@ interface Props {
   disabled: boolean;
 }
 
-const SingleCard: React.FC<Props> = ({ card, handleChoice, flipped, disabled }) => {
+const SingleCard: React.FC<Props> = ({
+  card,
+  handleChoice,
+  flipped,
+  disabled,
+}) => {
   const handleClick = () => {
     if (!disabled) {
       handleChoice(card);
@@ -21,9 +27,9 @@ const SingleCard: React.FC<Props> = ({ card, handleChoice, flipped, disabled }) 
 
   return (
     <div className="card">
-      <div className={flipped ? 'flipped' : ''}>
+      <div className={flipped ? "flipped" : ""}>
         <img className="front" src={card.src} alt="front" />
-        <img className="back" src="/img/Cover.png" onClick={handleClick} alt="back" />
+        <img className="back" src={Cover} onClick={handleClick} alt="back" />
       </div>
     </div>
   );

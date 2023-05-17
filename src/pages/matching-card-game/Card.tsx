@@ -1,23 +1,34 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
+import "./Card.css";
 import SingleCard from "./component/SingleCard";
 
+import cSharp from "./img/cSharp.png";
+import Java1 from "./img/Java-1.png";
+import Java2 from "./img/Java-2.png";
+import JS1 from "./img/JS-1.png";
+import JS2 from "./img/JS-2.png";
+import Python1 from "./img/Python-1.png";
+import Python2 from "./img/Python-2.png";
+import Php1 from "./img/Php-1.png";
+import SQL1 from "./img/SQL-1.png";
+import SQL2 from "./img/SQL-2.png";
+
 const cardImages = [
-  { id: 1, src: "/img/c-1.png", matched: false },
-  { id: 2, src: "/img/Java-1.png", matched: false },
-  { id: 3, src: "/img/JS-1.png", matched: false },
-  { id: 4, src: "/img/Php-1.png", matched: false },
-  { id: 5, src: "/img/Python-1.png", matched: false },
-  { id: 6, src: "/img/SQL-1.png", matched: false },
+  { id: 1, src: cSharp, matched: false },
+  { id: 2, src: Java1, matched: false },
+  { id: 3, src: JS1, matched: false },
+  { id: 4, src: Python1, matched: false },
+  { id: 5, src: Php1, matched: false },
+  { id: 6, src: SQL1, matched: false },
 ];
 
 const cardImages2 = [
-  { id: 111, src: "/img/c-1.png", matched: false },
-  { id: 222, src: "/img/Java-2.png", matched: false },
-  { id: 333, src: "/img/JS-2.png", matched: false },
-  { id: 444, src: "/img/Php-1.png", matched: false },
-  { id: 555, src: "/img/P-2.png", matched: false },
-  { id: 666, src: "/img/SQL-2.png", matched: false },
+  { id: 111, src: cSharp, matched: false },
+  { id: 222, src: Java2, matched: false },
+  { id: 333, src: JS2, matched: false },
+  { id: 444, src: Python2, matched: false },
+  { id: 555, src: Php1, matched: false },
+  { id: 666, src: SQL2, matched: false },
 ];
 
 function App() {
