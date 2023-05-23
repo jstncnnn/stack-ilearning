@@ -138,7 +138,7 @@ function App() {
   //calculating scores
 
   const totalScore = (time: number, turns: number): number => {
-    const baseScore = 10000;
+    const baseScore = 5000;
     const timePenalty = 10;
     const turnPenalty = 50;
 
@@ -183,7 +183,6 @@ function App() {
           </div>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }
