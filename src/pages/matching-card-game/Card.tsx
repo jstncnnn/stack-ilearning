@@ -40,6 +40,7 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState<Card | null>(null);
   const [disabled, setDisabled] = useState<boolean>(false);
   const [time, setTime] = useState<number>(0);
+  const [score, setScore] = useState<number>(0);
 
   //shuffle cards
   const shuffleCards = () => {
@@ -106,7 +107,9 @@ function App() {
     };
 
     handleCardMatching();
-  }, [choiceOne, choiceTwo]);
+    const calculatedScore = totalScore(time, turns);
+    setScore(calculatedScore);
+  }, [choiceOne, choiceTwo, time, turns]);
 
   // add timer
   useEffect(() => {
@@ -131,6 +134,21 @@ function App() {
   useEffect(() => {
     shuffleCards();
   }, []);
+
+  //calculating scores
+
+  const totalScore = (time: number, turns: number): number => {
+    const baseScore = 10000;
+    const timePenalty = 10;
+    const turnPenalty = 50;
+
+    const timePenaltyTotal = time * timePenalty;
+    const turnPenaltyTotal = turns * turnPenalty;
+
+    const score = Math.max(baseScore - timePenaltyTotal - turnPenaltyTotal, 0);
+
+    return score;
+  };
 
   return (
     <div>
@@ -160,10 +178,12 @@ function App() {
               </button>
               <p>Turns: {turns}</p>
               <p>Time: {time}</p>
+              <p>Score: {score}</p>
             </div>
           </div>
         </div>
       </div>
+      <div></div>
     </div>
   );
 }
