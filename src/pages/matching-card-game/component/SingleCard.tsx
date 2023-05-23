@@ -26,10 +26,10 @@ const SingleCard: React.FC<Props> = ({
   };
 
   return (
-    <div className="card">
+    <div className="matching-card">
       <div className={flipped ? "flipped" : ""}>
-        <img className="front" src={card.src} alt="front" />
-        <img className="back" src={Cover} onClick={handleClick} alt="back" />
+        <img className="matching-card-front" src={card.src} alt="front" />
+        <img className="matching-card-back" src={Cover} onClick={handleClick} alt="back" />
       </div>
     </div>
   );
