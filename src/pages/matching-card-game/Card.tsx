@@ -101,7 +101,11 @@ function App() {
           );
           resetTurn();
         } else {
-          setTimeout(() => resetTurn(), 1000);
+          setTimeout(() => {
+            resetTurn();
+            setChoiceOne(null);
+            setChoiceTwo(null);
+          }, 1000);
         }
       }
     };
