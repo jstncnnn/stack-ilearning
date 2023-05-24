@@ -143,8 +143,8 @@ function App() {
 
   const totalScore = (time: number, turns: number): number => {
     const baseScore = 1000;
-    const timePenalty = 3;
-    const turnPenalty = 5;
+    const timePenalty = 2;
+    const turnPenalty = 3;
 
     const timePenaltyTotal = time * timePenalty;
     const turnPenaltyTotal = turns * turnPenalty;
@@ -181,7 +181,7 @@ function App() {
                 New Game
               </button>
               <p>Turns: {turns}</p>
-              <p>Time: {time}</p>
+              <p>Time: {time}</p> <br /> <br />
               <p>Score: {score}</p>
             </div>
           </div>
